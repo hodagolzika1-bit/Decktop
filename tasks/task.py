@@ -25,6 +25,7 @@ while True:
             print("no tasks to dalete")
         else:
             print(task)
+        try:    
             task_number=int(input("enter task number to delate"))
             
             if task_number>=1 and task_number<=len(task):
@@ -32,6 +33,8 @@ while True:
                 print(f"deleted task is: {delete}")
             else:
                 print("invield value")
+        except ValueError:
+            print("please enter a valid number only!")
    elif choise=="4":
         print("good bye")
         break
